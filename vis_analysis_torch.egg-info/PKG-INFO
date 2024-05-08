@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: vis-analysis-torch
-Version: 0.3.1
+Version: 0.4.2
 Summary: a package for visualization analysis of pytorch models
 Home-page: https://github.com/YangChen-00/vis_analysis_torch.git
 Author: Curtis Chen
