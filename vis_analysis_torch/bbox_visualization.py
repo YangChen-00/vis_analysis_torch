@@ -36,7 +36,7 @@ def draw_bbox_in_image(img: np.array,
     
     img = convert_image(img, RGB2BGR, normlization, standardization_mean, standardization_std)
     
-    assert isinstance(bboxes, np.array), "bboxes must be np.array"
+    assert isinstance(bboxes, np.ndarray), "bboxes must be np.array"
     if len(bboxes.shape) == 1: # (4,) -> (1, 4)
         bboxes = bboxes[None, :]
         

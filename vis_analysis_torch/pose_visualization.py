@@ -94,7 +94,7 @@ def draw_pose_in_image(img: np.array,
     """
     img = convert_image(img, RGB2BGR, normlization, standardization_mean, standardization_std)
     
-    assert isinstance(poses, np.array), "poses must be np.array"
+    assert isinstance(poses, np.ndarray), "poses must be np.array"
     if len(poses.shape) == 2: # (K, 3) or (K, 2) -> (1, K, 3) or (1, K, 2)
         poses = poses[None, :]
     if poses.shape[2] == 3: # (N, K, 3) -> (N, K, 2) 或 (K, 3) -> (K, 2)
