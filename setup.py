@@ -6,7 +6,6 @@ setup(
     packages=find_packages(),
     install_requires=[
         "numpy",
-        "os",
         "opencv-python",
         "torch"
     ],
@@ -15,5 +14,5 @@ setup(
     description='a package for visualization analysis of pytorch models',
     license='MIT',
     keywords='visualization analysis pytorch',
-    url=''
+    url='https://github.com/YangChen-00/vis_analysis_torch.git'
 )
