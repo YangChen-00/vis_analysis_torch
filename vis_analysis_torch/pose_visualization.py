@@ -82,10 +82,10 @@ def draw_pose_in_image(img: np.array,
     if RGB2BGR:
         input_tensor = cv2.cvtColor(input_tensor, cv2.COLOR_RGB2BGR)
     
-    if len(pose.shape) == 2:
-        pose = pose[None, :]
-    if pose.shape[2] == 3:
-        pose = pose[:, :, :2]
+    if len(poses.shape) == 2:
+        poses = poses[None, :]
+    if poses.shape[2] == 3:
+        poses = poses[:, :, :2]
     
     assert draw_preset in ['coco', 'sodpose', None], "draw_preset must be in ['coco', 'sodpose', None]"
     
@@ -98,7 +98,7 @@ def draw_pose_in_image(img: np.array,
         assert min_kpt_id == 1, "the keypoint id must be starting from 0"
         
         if isinstance(draw_point_color, tuple):
-            draw_point_color = [draw_point_color for _ in range(pose.shape[1])]
+            draw_point_color = [draw_point_color for _ in range(poses.shape[1])]
         if isinstance(draw_skeleton_color, tuple):
             draw_skeleton_color = [draw_skeleton_color for _ in range(len(skeleton))]
     
